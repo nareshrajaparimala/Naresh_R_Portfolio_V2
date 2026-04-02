@@ -1,0 +1,48 @@
+export const experience = [
+  {
+    id: 1,
+    role: "Full Stack Developer",
+    company: "GoStudio",
+    logo: "https://via.placeholder.com/40x40/6366f1/ffffff?text=G",
+    duration: "2024 – Present",
+    location: "Chennai, India (Remote)",
+    description: "Building and maintaining a AI-powered creative platform. Working on features like real-time image generation, credit management, webhook integrations, and CI/CD pipelines.",
+    achievements: [
+      "Reduced API response time by 40% through Redis caching and query optimization",
+      "Built n8n automation workflows for credit history webhooks processing 10K+ events/day",
+      "Integrated 5+ AI providers (Fal AI, Stability AI, etc.) into a unified gateway",
+      "Improved Lighthouse performance score from 62 to 91 across key pages",
+    ],
+    tech: ["React", "Next.js", "Node.js", "PostgreSQL", "Redis", "AWS"],
+  },
+  {
+    id: 2,
+    role: "Frontend Developer",
+    company: "Freelance",
+    logo: "https://via.placeholder.com/40x40/8b5cf6/ffffff?text=F",
+    duration: "2023 – 2024",
+    location: "Remote",
+    description: "Developed custom web applications and landing pages for clients across various industries including e-commerce, fintech, and healthcare.",
+    achievements: [
+      "Delivered 12+ client projects on time and within budget",
+      "Built a real-time dashboard that processes $2M+ in daily transactions",
+      "Increased client conversion rates by 35% through UI/UX improvements",
+    ],
+    tech: ["React", "Tailwind CSS", "Node.js", "Firebase", "Stripe"],
+  },
+  {
+    id: 3,
+    role: "Intern — Web Developer",
+    company: "Tech Startup",
+    logo: "https://via.placeholder.com/40x40/06b6d4/ffffff?text=T",
+    duration: "2022 – 2023",
+    location: "Chennai, India",
+    description: "Assisted in building internal tools and customer-facing web applications. Gained hands-on experience with agile workflows and production deployments.",
+    achievements: [
+      "Built 3 internal tools used by 50+ employees daily",
+      "Migrated legacy jQuery codebase to React, reducing bundle size by 60%",
+      "Set up automated testing pipeline with 80%+ code coverage",
+    ],
+    tech: ["React", "JavaScript", "Python", "MySQL", "Docker"],
+  },
+];

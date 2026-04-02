@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Naresh Raja — Full Stack Developer & React Engineer</title>
+    <meta name="description" content="Naresh Raja is a Full Stack Developer specializing in React, Node.js, and AI integrations. Building beautiful, performant web experiences from Chennai, India." />
+    <meta name="keywords" content="Naresh Raja, Full Stack Developer, React Developer, Node.js, Portfolio, Chennai, AI Integration" />
+    <meta name="author" content="Naresh Raja" />
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Naresh Raja — Full Stack Developer" />
+    <meta property="og:description" content="Full Stack Developer specializing in React, Node.js, and AI integrations. Available for new projects." />
+    <meta property="og:url" content="https://nareshraja.dev" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Naresh Raja — Full Stack Developer" />
+    <meta name="twitter:description" content="Full Stack Developer specializing in React, Node.js, and AI integrations." />
+    <meta name="twitter:creator" content="@nareshraja" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Anti-FOUC: apply theme before React mounts -->
+    <script>
+      (function() {
+        var theme = localStorage.getItem('portfolio-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.backgroundColor = theme === 'dark' ? '#0f0f13' : '#f8fafc';
+        document.documentElement.style.color = theme === 'dark' ? '#f1f5f9' : '#0f172a';
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
