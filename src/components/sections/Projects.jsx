@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, X } from 'lucide-react';
+import { ExternalLink, X, Star } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { projects, projectCategories } from '../../data/projects';
 
@@ -119,8 +119,8 @@ export default function Projects() {
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'var(--gradient-1)' }}>
-                    ⭐ Featured
+                  <span className="text-xs font-bold px-3 py-1 rounded-full text-white flex items-center gap-1" style={{ background: 'var(--gradient-1)' }}>
+                    <Star size={11} fill="white" /> Featured
                   </span>
                   <span className="tag-chip">{projects[0].category}</span>
                 </div>

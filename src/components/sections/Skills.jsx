@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Monitor, Server, Brain } from 'lucide-react';
 import { skills } from '../../data/skills';
 
 export default function Skills() {
@@ -88,18 +89,18 @@ export default function Skills() {
 
         {/* Bottom summary */}
         <motion.div
-          className="mt-14 grid grid-cols-3 gap-6"
+          className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5 }}
         >
           {[
-            { label: "Frontend Expert", desc: "React, TypeScript, Tailwind", emoji: "⚛️" },
-            { label: "Backend Developer", desc: "Node.js, PostgreSQL, Redis", emoji: "🛠️" },
-            { label: "AI Integrator", desc: "OpenAI, Fal AI, LangChain", emoji: "🤖" },
+            { label: "Frontend Expert", desc: "React, Next.js, TypeScript, Tailwind", icon: <Monitor size={28} style={{ color: 'var(--primary)' }} /> },
+            { label: "Backend Developer", desc: "Node.js, FastAPI, PostgreSQL, Supabase", icon: <Server size={28} style={{ color: 'var(--primary)' }} /> },
+            { label: "AI Integrator", desc: "CNN + LSTM, MediaPipe, ML Pipelines", icon: <Brain size={28} style={{ color: 'var(--primary)' }} /> },
           ].map(item => (
             <div key={item.label} className="glass-card rounded-2xl p-5 text-center">
-              <div className="text-3xl mb-2">{item.emoji}</div>
+              <div className="flex justify-center mb-3">{item.icon}</div>
               <div className="font-semibold mb-1" style={{ color: 'var(--text)' }}>{item.label}</div>
               <div className="text-sm" style={{ color: 'var(--text-muted)' }}>{item.desc}</div>
             </div>

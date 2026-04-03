@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Award, Trophy, Star } from 'lucide-react';
+import { GraduationCap, Award, Trophy, Star, BarChart2, Code2, Database, Cpu } from 'lucide-react';
 
 const education = [
   {
@@ -14,10 +14,10 @@ const education = [
 ];
 
 const certifications = [
-  { name: "Full Stack Development", issuer: "Self-taught / Projects", year: "2024", icon: "⚛️", color: "#6366f1" },
-  { name: "AI & ML Architectures", issuer: "Final Year Project", year: "2025", icon: "🤖", color: "#8b5cf6" },
-  { name: "Supabase & PostgreSQL", issuer: "Gostudio.ai Internship", year: "2026", icon: "🗄️", color: "#3ecf8e" },
-  { name: "FastAPI & Python", issuer: "IoT Sign Language Project", year: "2025", icon: "🐍", color: "#06b6d4" },
+  { name: "Full Stack Development", issuer: "Self-taught / Projects", year: "2024", icon: <Code2 size={22} />, color: "#6366f1" },
+  { name: "AI & ML Architectures", issuer: "Final Year Project", year: "2025", icon: <Cpu size={22} />, color: "#8b5cf6" },
+  { name: "Supabase & PostgreSQL", issuer: "Gostudio.ai Internship", year: "2026", icon: <Database size={22} />, color: "#3ecf8e" },
+  { name: "FastAPI & Python", issuer: "IoT Sign Language Project", year: "2025", icon: <Code2 size={22} />, color: "#06b6d4" },
 ];
 
 const achievements = [
@@ -113,7 +113,10 @@ export default function Education() {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-3xl">{cert.icon}</div>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center"
+                    style={{ background: `${cert.color}22`, color: cert.color }}>
+                    {cert.icon}
+                  </div>
                   <div className="font-semibold text-sm" style={{ color: 'var(--text)' }}>{cert.name}</div>
                   <div className="text-xs" style={{ color: 'var(--text-muted)' }}>{cert.issuer}</div>
                   <span className="tag-chip text-xs">{cert.year}</span>
@@ -124,7 +127,7 @@ export default function Education() {
             {/* GitHub Stats */}
             <div className="mt-8">
               <h3 className="text-lg font-semibold mb-5 flex items-center gap-2" style={{ color: 'var(--text)' }}>
-                <span>📊</span> GitHub Stats
+                <BarChart2 size={22} style={{ color: 'var(--primary)' }} /> GitHub Stats
               </h3>
               <div className="flex flex-col gap-3">
                 <motion.img

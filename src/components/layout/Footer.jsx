@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Code2, Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personal } from '../../data/personal';
 
 
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm flex items-center gap-1.5" style={{ color: 'var(--text-muted)' }}>
-            © {year} Made with <Heart size={14} style={{ color: '#ef4444', fill: '#ef4444' }} /> by {personal.name}
+            &copy; {year} Made with <Heart size={14} style={{ color: '#ef4444', fill: '#ef4444' }} /> by {personal.name}
           </p>
 
           {/* Social links */}
@@ -29,10 +29,8 @@ export default function Footer() {
             {[
               { href: personal.github, icon: <FaGithub size={18} />, label: 'GitHub' },
               { href: personal.linkedin, icon: <FaLinkedin size={18} />, label: 'LinkedIn' },
-              { href: personal.twitter, icon: <FaTwitter size={18} />, label: 'Twitter' },
               { href: `mailto:${personal.email}`, icon: <Mail size={18} />, label: 'Email' },
             ].map(s => (
-
               <a
                 key={s.label}
                 href={s.href}

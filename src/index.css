@@ -390,6 +390,15 @@ input:focus, textarea:focus {
    MOBILE IMPROVEMENTS
    ===================================================== */
 @media (max-width: 640px) {
-  .section { padding: 4rem 0; }
+  .section { padding: 3.5rem 0; }
   .section-title { font-size: 1.75rem; }
+  .container { padding: 0 1rem; }
+  .section-subtitle { font-size: 0.95rem; }
+  .btn-primary, .btn-outline { padding: 0.65rem 1.25rem; font-size: 0.85rem; }
+  .glass-card:hover { transform: none; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 3rem 0; }
+  .container { padding: 0 0.875rem; }
 }

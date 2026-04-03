@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Server, Cpu, Rocket, Palette, Cloud } from 'lucide-react';
+import { Code2, Server, Cpu, Rocket, Palette, Cloud, Database } from 'lucide-react';
 import { personal } from '../../data/personal';
 
-const iconMap = { Code2, Server, Cpu, Rocket, Palette, Cloud };
+const iconMap = { Code2, Server, Cpu, Rocket, Palette, Cloud, Database };
 
 export default function Services() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { MapPin, Mail, Briefcase, Gamepad2 } from 'lucide-react';
 import { personal } from '../../data/personal';
+import nareshImg from '../../assets/Naresh.png';
 
 // Simple animated counter component (no external dependency)
 function AnimatedCounter({ end, suffix = '', duration = 2500 }) {
@@ -40,9 +42,9 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden"
               style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-              <div className="aspect-square w-full flex items-center justify-center p-12"
+              <div className="aspect-square w-full overflow-hidden"
                 style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1))' }}>
-                <span style={{ fontSize: '8rem' }}>👨‍💻</span>
+                <img src={nareshImg} alt="Naresh Raja" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
               </div>
               {/* Code snippet overlay */}
               <div className="absolute bottom-4 left-4 right-4 rounded-xl p-4 font-mono text-xs"
@@ -79,13 +81,13 @@ export default function About() {
             {/* Fun facts */}
             <div className="mt-6 flex flex-col gap-3">
               {[
-                { emoji: '🌍', label: 'Location', value: personal.location },
-                { emoji: '📧', label: 'Email', value: personal.email },
-                { emoji: '🎯', label: 'Currently', value: 'Product Engineering Intern at Gostudio.ai' },
-                { emoji: '🎮', label: 'Hobbies', value: 'Competitive Programming, Open Source, Building AI tools' },
+                { icon: <MapPin size={18} style={{ color: 'var(--primary)' }} />, label: 'Location', value: personal.location },
+                { icon: <Mail size={18} style={{ color: 'var(--primary)' }} />, label: 'Email', value: personal.email },
+                { icon: <Briefcase size={18} style={{ color: 'var(--primary)' }} />, label: 'Currently', value: 'Product Engineering Intern at Gostudio.ai' },
+                { icon: <Gamepad2 size={18} style={{ color: 'var(--primary)' }} />, label: 'Hobbies', value: 'Competitive Programming, Open Source, Building AI tools' },
               ].map(item => (
                 <div key={item.label} className="flex items-start gap-3">
-                  <span className="text-xl">{item.emoji}</span>
+                  <span className="mt-0.5 flex-shrink-0">{item.icon}</span>
                   <div>
                     <span className="text-sm font-medium" style={{ color: 'var(--text-muted)' }}>{item.label}: </span>
                     <span className="text-sm" style={{ color: 'var(--text)' }}>{item.value}</span>

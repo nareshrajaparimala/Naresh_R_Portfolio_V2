@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personal } from '../../data/personal';
 
 export default function Contact() {
@@ -73,7 +73,6 @@ export default function Contact() {
                 {[
                   { href: personal.github, icon: <FaGithub size={20} />, label: 'GitHub' },
                   { href: personal.linkedin, icon: <FaLinkedin size={20} />, label: 'LinkedIn' },
-                  { href: personal.twitter, icon: <FaTwitter size={20} />, label: 'Twitter' },
                 ].map(s => (
                   <motion.a
                     key={s.label}
