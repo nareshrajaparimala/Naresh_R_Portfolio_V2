@@ -81,8 +81,8 @@ export default function About() {
               {[
                 { emoji: '🌍', label: 'Location', value: personal.location },
                 { emoji: '📧', label: 'Email', value: personal.email },
-                { emoji: '🎯', label: 'Currently', value: 'Building cool things at GoStudio' },
-                { emoji: '🎮', label: 'Hobbies', value: 'Open Source, Gaming, Photography' },
+                { emoji: '🎯', label: 'Currently', value: 'Product Engineering Intern at Gostudio.ai' },
+                { emoji: '🎮', label: 'Hobbies', value: 'Competitive Programming, Open Source, Building AI tools' },
               ].map(item => (
                 <div key={item.label} className="flex items-start gap-3">
                   <span className="text-xl">{item.emoji}</span>

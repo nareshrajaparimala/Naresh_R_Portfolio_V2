@@ -232,7 +232,7 @@ export default function Hero() {
                 whiteSpace: 'nowrap',
               }}
             >
-              ⚛️ React Dev
+              ⚡ Product Engineer
             </motion.div>
 
             {/* Floating badge: Experience */}
@@ -251,7 +251,7 @@ export default function Hero() {
                 whiteSpace: 'nowrap',
               }}
             >
-              🚀 3+ Years Exp
+              🎓 Final Year CSE
             </motion.div>
 
             {/* Floating badge: Open to work */}
